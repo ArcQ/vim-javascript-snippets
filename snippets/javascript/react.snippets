@@ -28,11 +28,13 @@ snippet rcdm
 #redux
 snippet rcon
 	const mapStateToProps = (state) => ({
+	${0}
 	});
 
 	const mapDispatchToProps = {
+	${1}
 	};
 
 	export default compose(
 		connect(mapStateToProps, mapDispatchToProps),
-	);
+	)(${3});
