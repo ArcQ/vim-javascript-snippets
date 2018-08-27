@@ -1,0 +1,38 @@
+# Import both React and Component
+snippet ri
+	import React from 'react';
+	import PropTypes from 'prop-types';
+
+# React Component
+snippet rc 
+	function ${1:MyComponent}(props) {
+			return (
+				${0:<div></div>}
+			);
+	}
+	${1:MyCompoennt}.propTypes = {
+		${2}: PropTypes.${3},
+	}
+
+# React Lifecycles
+snippet rscu 
+	shouldComponentUpdate(nextProps) {
+		return deepCompare(this.props, nextProps, [${1}]);
+	},
+
+snippet rcdm
+	componentDidMount() {
+		${0:${VISUAL}}
+	}
+
+#redux
+snippet rcon
+	const mapStateToProps = (state) => ({
+	});
+
+	const mapDispatchToProps = {
+	};
+
+	export default compose(
+		connect(mapStateToProps, mapDispatchToProps),
+	);
